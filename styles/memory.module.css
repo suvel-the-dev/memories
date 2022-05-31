@@ -1,0 +1,11 @@
+.memory_imgContainer {
+  position: relative;
+  display: block;
+  width: auto;
+  max-height: 200px;
+  height: 100vh;
+}
+
+.memory_imgContainer img{
+  object-fit: contain;
+}
