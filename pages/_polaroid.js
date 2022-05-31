@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../styles/polaroid.module.css'
+import Image from 'next/image'
 
 const getRandomPlacement = () => {
 
@@ -11,15 +12,20 @@ const getRandomPlacement = () => {
     const getRanZIndex = () => {
         return possibleZIndex[Math.floor(Math.random() * possibleZIndex.length)];
     }
-    return { "transform": `rotate(${getRanPlc()})`, "z-index": getRanZIndex() }
+    return { "transform": `rotate(${getRanPlc()})`, "zIndex": getRanZIndex() }
 }
 
-function Polaroid({ image, title, description, location, geoMark }) {
+
+function Polaroid({ id, image, title, description, location, geoMark }) {
     return (
-        <div style={getRandomPlacement()} className={styles.polaroid}>
-            <img className={styles.polaroid_img} src={image} />
-            <div className={styles.polaroid_caption}>{title}</div>
-        </div>
+        <>
+            <div style={getRandomPlacement()} className={styles.polaroid}>
+                <div id={id} className={styles.polaroid_imgContainer} >
+                    <Image layout="fill" className={styles.polaroid_img} src={image} />
+                </div>
+                <div className={styles.polaroid_caption}>{title}</div>
+            </div>
+        </>
     )
 }
 

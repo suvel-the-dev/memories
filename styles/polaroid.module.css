@@ -15,10 +15,18 @@
   z-index: 20;
 }
 
-.polaroid_img {
+.polaroid_imgContainer {
   height: 150px;
+  min-width: 200px;
   margin: 0px;
+  position: relative;
+}
+
+.polaroid_img {
+  object-fit: cover;
 }
 
 .polaroid_caption {
+  margin-top: 20px;
+  font-family: 'Cedarville Cursive', cursive;
 }
