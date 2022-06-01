@@ -29,4 +29,8 @@
 .polaroid_caption {
   margin-top: 20px;
   font-family: "Cedarville Cursive", cursive;
+  overflow: hidden;
+  max-width: 20ch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
