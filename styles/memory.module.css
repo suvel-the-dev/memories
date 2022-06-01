@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 
+.memory {
+  width: fit-content;
+  margin: auto;
+}
+
 .memory_imgContainer {
   position: relative;
   display: block;

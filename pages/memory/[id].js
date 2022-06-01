@@ -20,7 +20,7 @@ export default function Memory(props) {
 
     const description = memory?.description || "";
 
-    return (<div className='memory'>
+    return (<div className={styles.memory}>
         <section className={styles.memory_meta}>
             <div className={styles.memory_imgContainer}>
                 <Image
