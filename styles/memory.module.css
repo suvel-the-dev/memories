@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
 .memory_imgContainer {
   position: relative;
   display: block;
@@ -8,7 +10,6 @@
 .memory_meta {
   display: flex;
   gap: 10px;
-  width: 70vw;
   margin: auto;
   flex-wrap: wrap;
   padding: 16px;
@@ -16,7 +17,7 @@
 }
 
 .memory_imgContainer {
-  flex: 2;
+  flex: 1;
   min-width: 200px;
 }
 .memory_details {
@@ -32,7 +33,17 @@
 }
 
 .memory_desc {
-  width: 60vw;
   margin: 16px auto;
-  font-family: "Cedarville Cursive", cursive;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 2rem;
+}
+
+/* desktop and laptops */
+@media only screen and (min-width: 992px) {
+  .memory_desc {
+    width: 60vw;
+  }
+  .memory_meta {
+    width: 70vw;
+  }
 }
