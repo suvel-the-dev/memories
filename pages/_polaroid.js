@@ -19,7 +19,7 @@ const getRandomPlacement = () => {
 function Polaroid({ id, image, title, description, location, geoMark }) {
     return (
         <>
-            <div style={{ "transform": "rotate(-10deg)", "zIndex": 2 }} className={styles.polaroid}>
+            <div style={getRandomPlacement()} className={styles.polaroid}>
                 <div id={id} className={styles.polaroid_imgContainer} >
                     <Image layout="fill" className={styles.polaroid_img} src={image} />
                 </div>
