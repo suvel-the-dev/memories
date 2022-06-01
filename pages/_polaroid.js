@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/polaroid.module.css'
 import Image from 'next/image'
+import Router from 'next/router'
 
 const getRandomPlacement = () => {
 
@@ -17,9 +18,10 @@ const getRandomPlacement = () => {
 
 
 function Polaroid({ id, image, title, description, location, geoMark }) {
+
     return (
         <>
-            <div style={getRandomPlacement()} className={styles.polaroid}>
+            <div onClick={() => { Router.push(`/memory/${id}`) }} style={getRandomPlacement()} className={styles.polaroid}>
                 <div id={id} className={styles.polaroid_imgContainer} >
                     <Image layout="fill" className={styles.polaroid_img} src={image} />
                 </div>

@@ -10,6 +10,7 @@ const MemoryFrames = ({ memories = [] }) => {
             return (
                 <Polaroid
                     key={memory.id}
+                    id={memory.id}
                     image={memory.image}
                     title={memory.title}
                     description={memory.description}

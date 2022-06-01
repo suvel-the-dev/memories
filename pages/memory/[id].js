@@ -19,16 +19,22 @@ export default function Memory(props) {
     }, [memory])
 
     return (<div className='memory'>
-        <h1 className='memory_title'>{memory?.title}</h1>
-        <h2 className='memory_loc'>{memory?.location}</h2>
-        <div className={styles.memory_imgContainer}>
-            <Image
-                className='memory_img'
-                layout='fill'
-                src={memory?.image || "https://picsum.photos/200"} />
-        </div>
-        <p className='memory_desc'>
-            {memory?.description}
-        </p>
-    </div>)
+        <section className={styles.memory_meta}>
+            <div className={styles.memory_imgContainer}>
+                <Image
+                    className='memory_img'
+                    layout='fill'
+                    src={memory?.image || "https://picsum.photos/200"} />
+            </div>
+            <div className={styles.memory_details}>
+                <h1 className='memory_title'>{memory?.title}</h1>
+                <h2 className='memory_loc'>{memory?.location}</h2>
+            </div>
+        </section>
+        <section >
+            <p className={styles.memory_desc}>
+                {memory?.description}
+            </p>
+        </section>
+    </div >)
 }
