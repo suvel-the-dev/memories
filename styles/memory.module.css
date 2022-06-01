@@ -24,6 +24,7 @@
   display: grid;
   place-content: center;
   white-space: nowrap;
+  text-align: center;
 }
 
 .memory_imgContainer img {

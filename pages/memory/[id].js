@@ -28,7 +28,7 @@ export default function Memory(props) {
             </div>
             <div className={styles.memory_details}>
                 <h1 className='memory_title'>{memory?.title}</h1>
-                <h2 className='memory_loc'>{memory?.location}</h2>
+                <h3 className='memory_loc'>{memory?.location}</h3>
             </div>
         </section>
         <section >
