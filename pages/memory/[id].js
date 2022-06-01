@@ -18,6 +18,8 @@ export default function Memory(props) {
         console.log(memory)
     }, [memory])
 
+    const description = memory?.description || "";
+
     return (<div className='memory'>
         <section className={styles.memory_meta}>
             <div className={styles.memory_imgContainer}>
@@ -32,9 +34,13 @@ export default function Memory(props) {
             </div>
         </section>
         <section >
-            <p className={styles.memory_desc}>
-                {memory?.description}
-            </p>
+            {description.split('\n').map((item, index) => {
+                return (
+                    <p key={index} className={styles.memory_desc}>
+                        {item}
+                    </p>
+                )
+            })}
         </section>
     </div >)
 }
